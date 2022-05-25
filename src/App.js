@@ -16,11 +16,11 @@ const App = (props) => {
 
   useEffect(()=>{
     axios.get('http://localhost:9000/api/movies')
-      .then(res => {
-        setMovies(res.data);
+      .then(response => {
+        setMovies(response.data);
       })
-      .catch(err => {
-        console.log(err);
+      .catch(error => {
+        console.log(error);
       });
   }, []);
 
